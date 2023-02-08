@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Previsao = () => {
+const Home = () => {
     return (
         <div>
-            <h1>Página previsao</h1>
+            <h1>Página Inicial</h1>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/previsao">Previsao</Link>
                     </li>
 
                 </ul>
@@ -17,4 +17,4 @@ const Previsao = () => {
     );
 }
 
-export default Previsao;
+export default Home;

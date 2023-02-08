@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import Routes from "./Router";
 
 function App() {
   const [searchedCity, setSearchedCity] = useState('')
@@ -64,7 +65,7 @@ function App() {
 
 
 
-  return (
+  /*return (
 
     <div className="App">
       <h1>{"Previsão do Tempo".toUpperCase()}</h1>
@@ -83,13 +84,14 @@ function App() {
 
         </>)}
 
-      <p className='data'>
-        {diasemana} , {date.getDate()} de {mes} de {date.getFullYear()}
-      </p>
+
 
 
       {weather && weather.main && (
         <>
+          <p className='data'>
+            {diasemana} , {date.getDate()} de {mes} de {date.getFullYear()}
+          </p>
           <div className="wrap">
             <p className='min'>Mínima</p>
             <div className="wrap--atual">
@@ -112,7 +114,15 @@ function App() {
     </div>
 
 
-  )
+  )*/
+
+  return (
+    <Routes />
+  );
+
+
+
+
 }
 
 export default App
