@@ -40,6 +40,14 @@
   padding-bottom: 30px;
 }
 
+.wrap--um, .wrap--nas, .wrap--por{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+  width: 225px;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
