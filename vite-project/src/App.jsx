@@ -13,7 +13,6 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault()
     setCity(searchedCity)
-    console.log(searchedCity)
   }
 
   useEffect(() => {
@@ -28,13 +27,8 @@ function App() {
         data.sys.sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString()
 
         data.sys.sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString()
-
       }
-
-
       setWeather(data)
-
-      console.log(data)
     }
     getCityWeather()
   }, [city])
@@ -70,7 +64,6 @@ function App() {
           <button type='submit'>Procurar</button>
         </form>
       </div>
-
 
       {city && (
         <>
@@ -134,11 +127,9 @@ function App() {
 
             )}
 
-
           </div>
 
           <div className="wrap top">
-
             <div className="wrap--min">
               <p className='min'>Mínima</p>
               <p className='min--temp'>{weather.main.temp_min.toFixed(0)}°C</p>
@@ -153,7 +144,6 @@ function App() {
               <p className='max'>Máxima</p>
               <p className='max--temp'>{weather.main.temp_max.toFixed(0)}°C</p>
             </div>
-
           </div>
 
           <div className="wrap--bottom">
@@ -170,9 +160,7 @@ function App() {
               <p>{weather.sys.sunset}</p>
             </div>
 
-
           </div>
-
         </>
       )
       }
